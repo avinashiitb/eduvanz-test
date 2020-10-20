@@ -6,7 +6,8 @@ import RegisterForm from '../../components/user/RegisterForm';
 
 function mapStateToProps(store) {
   return {
-    loader: store.loader
+    loader: store.loader,
+    users: store.users
   }
 }
 
@@ -19,7 +20,7 @@ class Register extends Component {
       dispatch,
       match
     } = this.props;
-    // console.log("Props", this.props);
+    console.log("Props", this.props.users);
     return (
       <RegisterForm
         history = {history}

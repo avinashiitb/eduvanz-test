@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 
 // import reducers
-import userDetails from './userReducer';
+import users from './userReducer';
 import loginActivity from './loginReducer';
 import myStoreDetails from './adminStoreReducer';
 
 const allReducers = combineReducers({
-  userDetails,
+  users,
   loginActivity,
   myStoreDetails,
 });

@@ -21,7 +21,8 @@ import './App.css';
 
 library.add(
   faCoffee,
-  faUserPlus
+  faUserPlus,
+  faCheckCircle
 )
 function mapStateToProps(store) {
   return {
