@@ -1,0 +1,93 @@
+.visuallyhidden {
+    display: none;
+}
+
+.wizard-progress {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    white-space: nowrap;
+}
+
+.wizard-progress li {
+    float: left;
+    margin-right: 50px;
+    text-align: center;
+    position: relative;
+    width: 75px;
+}
+
+.wizard-progress .step-name {
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+    width: 100px;
+    font-size: 13px;
+}
+
+.wizard-progress .step-name-wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: bottom;
+}
+
+.wizard-progress .step-num {
+    font-size: 14px;
+    font-weight: bold;
+    border: 3px solid #eff2f8;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.wizard-progress .step-num:after {
+    content: "";
+    display: block;
+    background: #3f91ec;
+    height: 2px;
+    width: 98px;
+    position: absolute;
+    bottom: 14px;
+    left: 51px;
+}
+
+.wizard-progress li:last-of-type .step-num:after {
+    display: none;
+}
+
+.wizard-progress .active-step .step-num {
+    background-color: #18b353;
+    color: white;
+}
+.last-step {
+    margin-right: 0px !important;
+}
+.cancelStatus {
+    border-left: 5px solid #c21010 !important;
+}
+.pendingStatus {
+    border-left: 5px solid #ebac24 !important;
+}
+.successStatus {
+    border-left: 5px solid #18b353 !important;
+}
+.storeDisplay {
+    background-color: white !important;
+    display: block !important;
+    border: 1px solid #e5e9f2 !important;
+    border-radius: 0.25rem !important;
+}
+.linkDisplay {
+    border: 0px !important;
+    border-radius: 0px !important;
+    font-size: 13px;
+}
+.notification {
+    position: absolute !important; 
+    right: 3.1rem;
+    top: 1rem; 
+}
