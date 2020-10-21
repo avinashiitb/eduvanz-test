@@ -7,7 +7,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faCoffee,
   faUserPlus,
-  faSearch
+  faSearch,
+  faUserCog,
+  faUsersCog
 } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 // import Parse from "parse";
@@ -19,13 +21,16 @@ import { setLoading } from './../actions/loaderAction';
 import Sidebar from './../components/common/Sidebar';
 import Register from './../containers/user/Register';
 import Search from './../containers/user/Search';
+import Admin from './../containers/admin'
 import './App.css';
 
 library.add(
   faCoffee,
   faUserPlus,
   faCheckCircle,
-  faSearch
+  faSearch,
+  faUserCog,
+  faUsersCog
 )
 function mapStateToProps(store) {
   return {
@@ -67,6 +72,7 @@ class App extends Component {
           <Sidebar />
             <Route exact path='/' component={Register} />
             <Route path='/search' component={Search} />
+            <Route path='/admin' component={Admin} />
         </Fragment>
       </BrowserRouter>
     );

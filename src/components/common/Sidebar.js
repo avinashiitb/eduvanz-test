@@ -54,21 +54,17 @@ class Sidebar extends Component {
             >
               <FontAwesomeIcon icon={['fas', 'search']} />
               <span style={{display: "block", fontSize: "11px"}}><b>Search</b></span>
-              {/* Alternate :: External File link */}
-              {/* <img class="injectable hw-24" src="./../assets/media/heroicons/outline/users.svg" alt="Friends icon"> */}
             </NavLink>
           </li>
-          {/* Friends Tab End */}
           <li className="nav-item">
             <NavLink
-              activeClassName="active" to="/history"
+              activeClassName="active" to="/admin"
               className="nav-link p-0 py-xl-3"
-              title="Order History"
+              title="Admin"
               style={{textAlign: "center"}}
             >
-              <FontAwesomeIcon icon={['fas', 'history']} />
-              <span style={{display: "block", fontSize: "11px"}}><b>Order</b></span>
-              {/* <i class="flaticon-buy"></i>  */}
+              <FontAwesomeIcon icon={['fas', 'user-cog']} />
+              <span style={{display: "block", fontSize: "11px"}}><b>Admin</b></span>
             </NavLink>
           </li>
         </ul>

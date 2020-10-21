@@ -41,7 +41,9 @@ class RegisterForm extends Component {
         .required('Profession is required'),
       locality: Yup.string()
         .required('Locality is required'),
-      guest: Yup.string()
+      guest: Yup.number()
+        .max(2, 'Max two guest allowed!')
+        .required('OTP is Required')
         .required('No. of guest is required'),
       address: Yup.string()
         .required('Address is required'),
