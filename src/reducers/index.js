@@ -2,13 +2,11 @@ import { combineReducers } from 'redux';
 
 // import reducers
 import users from './userReducer';
-import loginActivity from './loginReducer';
-import myStoreDetails from './adminStoreReducer';
+import loader from './loaderReducer';
 
 const allReducers = combineReducers({
   users,
-  loginActivity,
-  myStoreDetails,
+  loader,
 });
 
 const rootReducer = (state, action) => {

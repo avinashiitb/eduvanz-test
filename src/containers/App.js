@@ -34,7 +34,7 @@ library.add(
 )
 function mapStateToProps(store) {
   return {
-    loginActivity: store.loginActivity
+    loader: store.loader,
   }
 }
 const override = css`
@@ -47,17 +47,13 @@ const override = css`
 class App extends Component {
   render() {
     const {
-      loginActivity,
+      loader,
       dispatch,
-      storeDetails,
-      match
     } = this.props;
-    const { auth } = loginActivity || "";
     let display="";
-    if(!loginActivity.loader){
+    if(!loader.loader){
       display = "none";
     }
-
     return (
       <BrowserRouter>
         <Fragment>
@@ -66,7 +62,7 @@ class App extends Component {
               css={override}
               size={15}
               color={"#123abc"}
-              loading={loginActivity.loader}
+              loading={loader.loader}
             />
           </div>
           <Sidebar />
