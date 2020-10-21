@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button, ButtonToolbar, Modal, Container, Row, Col } from 'react-bootstrap';
+import { Modal} from 'react-bootstrap';
 import { registerAction } from '../../actions/userActions';
 import { setLoading } from '../../actions/loaderAction';
 

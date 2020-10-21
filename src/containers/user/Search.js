@@ -2,51 +2,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import HomeComponent from './../../components/customer/HomeComponent';
+import SearchComponent from '../../components/user/SearchComponent';
 
 function mapStateToProps(store) {
   return {
-    loginActivity: store.loginActivity,
-    userProfile: store.userDetails,
-    storeDetails: store.storeDetails,
-    categoryList: store.categoryList
+    loader: store.loader,
+    users: store.users
   }
 }
 
-class Home extends Component {
+class Search extends Component {
 
   render() {
     const {
       history,
-      loginActivity,
-      match,
+      loader,
       dispatch,
-      userProfile,
-      storeDetails,
-      categoryList
+      match,
+      users
     } = this.props;
-    const { category } = categoryList.categoryList;
-    // console.log("Home Prop", this.props.isGeolocationEnabled)
+    console.log("Search Prop", users)
     return (
-        <HomeComponent
+        <SearchComponent
           history = {history}
-          loginActivity = {loginActivity}
-          userProfile = {userProfile}
-          storeDetails = {storeDetails}
-          categoryList = {categoryList}
+          loader = {loader}
           match = {match}
           dispatch = {dispatch}
+          users = {users}
         />
     )
   }
 }
 
-Home.propTypes = {
-  history: PropTypes.object,
-  loginActivity: PropTypes.object,
-  userProfile: PropTypes.object,
-  match: PropTypes.object,
-  dispatch: PropTypes.func
-};
-
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(Search);

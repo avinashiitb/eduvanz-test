@@ -47,13 +47,13 @@ class Sidebar extends Component {
           {/* Search Tab Start */}
           <li className="nav-item">
             <NavLink
-              activeClassName="active" to="/myStore"
+              activeClassName="active" to="/search"
               className="nav-link p-0 py-xl-3"
               title="Search"
               style={{textAlign: "center"}}
             >
-              <FontAwesomeIcon icon={['fas', 'store-alt']} />
-              <span style={{display: "block", fontSize: "11px"}}><b>My Store</b></span>
+              <FontAwesomeIcon icon={['fas', 'search']} />
+              <span style={{display: "block", fontSize: "11px"}}><b>Search</b></span>
               {/* Alternate :: External File link */}
               {/* <img class="injectable hw-24" src="./../assets/media/heroicons/outline/users.svg" alt="Friends icon"> */}
             </NavLink>

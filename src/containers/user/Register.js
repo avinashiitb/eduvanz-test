@@ -20,7 +20,7 @@ class Register extends Component {
       dispatch,
       match
     } = this.props;
-    console.log("Props", this.props.users);
+    // console.log("Props", this.props.users);
     return (
       <RegisterForm
         history = {history}

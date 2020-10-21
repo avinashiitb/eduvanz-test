@@ -6,7 +6,8 @@ import DotLoader from "react-spinners/FadeLoader";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faCoffee,
-  faUserPlus
+  faUserPlus,
+  faSearch
 } from '@fortawesome/free-solid-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 // import Parse from "parse";
@@ -17,12 +18,14 @@ import { setLoading } from './../actions/loaderAction';
 // Components
 import Sidebar from './../components/common/Sidebar';
 import Register from './../containers/user/Register';
+import Search from './../containers/user/Search';
 import './App.css';
 
 library.add(
   faCoffee,
   faUserPlus,
-  faCheckCircle
+  faCheckCircle,
+  faSearch
 )
 function mapStateToProps(store) {
   return {
@@ -63,6 +66,7 @@ class App extends Component {
           </div>
           <Sidebar />
             <Route exact path='/' component={Register} />
+            <Route path='/search' component={Search} />
         </Fragment>
       </BrowserRouter>
     );
